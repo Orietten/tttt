@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ввод года</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="Minor/project/style.css">
+
+</head>
+<body>
+  <header class = "navigation"> 
+          <nav > 
+              <ul>
+                  <li> <a href = "index.html#header" target = "_self"> <u>Главная</u></a></li>
+                  <li> <a href = "index2.html">Самые спокойные породы кошек</a></li>
+                
+                  <li> <a href = "passport.html">Паспорт</a></li>
+                  <li> <a href = "anketa.html">Оставить заявку</a></li>
+                  <li> <a href = "algorithm.html">Алгоритмическая задача</a></li>
+
+              </ul>
+          </nav>
+  </header>
+<form id="yearForm">
+  <label for="year">Введите год:</label>
+  <input type="number" id="year" name="year" required>
+  <button type="submit">Отправить</button>
+</form>
+
+<div id="result"></div>
+
+<script>
+  document.getElementById('yearForm').addEventListener('submit', function(event) {
+    event.preventDefault(); 
+    let year = parseInt(document.getElementById('year').value);
+
+    if (isNaN(year)) {
+      document.getElementById('result').innerHTML = "Некорректный ввод. Введите число.";
+    } else {
+      document.getElementById('result').innerHTML = `Год ${year} ${isLeap(year) ? "високосный" : "не високосный"}, ${getCentury(year)} век.`;
+    }
+  });
+
+  function isLeap(year) {
+      return (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;
+  }
+
+  function getCentury(year) {
+      return Math.ceil(year / 100);
+  }
+</script>
+<a href="index.html">На главную страницу</a>
+</body>
+</html>

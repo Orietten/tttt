@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+<title>Форма отправки данных</title>
+<link rel="stylesheet" href="Minor/project/style.css">
+</head>
+<body>
+  <header class = "navigation"> 
+          <nav > 
+              <ul>
+                  <li> <a href = "index.html#header" target = "_self"> <u>Главная</u></a></li>
+                  <li> <a href = "index2.html">Самые спокойные породы кошек</a></li>
+                
+                  <li> <a href = "passport.html">Паспорт</a></li>
+                  <li> <a href = "anketa.html">Оставить заявку</a></li>
+                  <li> <a href = "algorithm.html">Алгоритмическая задача</a></li>
+
+              </ul>
+            </nav>
+  </header> 
+<h1>Оставить заявку</h1>
+
+ <form class = "form" action = 'https://www.google.ru/?hl=ru' method = "get" target = "_blank">
+  <!-- Текстовое поле для имени -->
+  <label for="customer_name">Имя Фамилия Отчество:</label><br>
+  <input type="text" id="customer_name" name="customer_name" value="Имя по умолчанию"><br><br>
+
+ 
+  <label for="phone_number">Номер телефона:</label><br>
+  <input type="number" id="phone_number" name="phone_number" value="1234567890"><br><br>
+
+  <label>Имеете/имели ли вы животных:</label><br>
+  <input type="radio" id="delivery_method_courier" name="previous_animals" value="Yes" checked>
+  <label for="previous_animals_yes">Да</label><br>
+  <input type="radio" id="previous_animals_no" name="previous_animals" value="No">
+  <label for="previous_animals_no">Нет</label><br><br>
+
+  
+  <label>Дополнительные опции:</label><br>
+  <input type="checkbox" id="children" name="children" value="yes">
+  <label for="gift_wrapping">Имеете ли вы детей</label><br>
+  
+  <label for="order_date">Дата заявки:</label><br>
+  <input type="date" id="request_date" name="request_date" value="2024-03-15"><br><br>
+
+  <!-- Поле для пароля (например, для доступа к учетной записи) -->
+  <label for="password">Пароль:</label><br>
+  <input type="password" id="password" name="password" value="password123"><br><br>
+
+  <!-- Скрытое поле -->
+  <input type="hidden" id="request_id" name="request_id" value="12345">
+
+  <!-- Кнопка отправки -->
+  <input type="submit" value="Отправить">
+
+</form>
+<h2>Форма для отправки личных данных</h2>
+<form action="https://www.bing.com/search?" id="UserEnter" name="UserEnter" target="_blank" method="get">
+  <p>Для поисковика:<input type="hidden"  name="q" value="search"></p>
+  <p>Фамилия: <input type="Text" name="last_name" size=20  value="Иванов"></p>
+  <p>Имя: <input type="Text" name="first_name" size=20  value="Иван"></p>
+  <p>Возраст: <input type="Number" name="age" size=20 value="0"></p>
+  <p>Электронная почта: <input type="email" value="ivanovivan@mail.ru"></p>
+  <p>Место проживания:
+      <input type="Radio" name="place" value="Moscow">Москва
+      <input type="Radio" name="place" value="drugoe" checked >Другое
+  </p>
+  <input type="submit" value="Отправить">
+</form>
+<a href="index.html">На главную страницу</a>
+</body>
+</html>
